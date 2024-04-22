@@ -8,6 +8,7 @@ function onLogout(player)
 	if player:getStorageValue(1000) == 1 then
 		-- addEvent(releaseStorage, 1000, player) <-- OLD
 		releaseStorage(player) -- <-- NEW
+		return true
 	end
-	return true
+	return false
 end

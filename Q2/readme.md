@@ -5,4 +5,4 @@ Presumably a typo in the function name, also `memberCount` wasn't an incredibly 
 Rename them!
 
 ## METHODOLOGY:
-There wasn't much for this one, just look at the names and decide they were inefficient. I did also check the function calls for validity, focused on that SQL syntax. Although my SQL is rusty, it looks valid from what I can gather. I also thought `result` was actually meant to be the var `resultId` before I looked into how `result` works. It was then that I realized `resultId` is actually an error code, and therefore should be checked before proceeding!
+There wasn't much for this one, just look at the names and decide they were inefficient. I did also check the function calls for validity, focused on that SQL syntax. Although my SQL is rusty, it does look valid from what I can gather. I also thought `result` was actually meant to be the var `resultId` before I looked into how `result` works. It was then that I realized `resultId` is actually an error code, and therefore should be checked before proceeding!

@@ -3,11 +3,13 @@
 void Game::addItemToPlayer(const std::string& recipient, uint16_t itemId)
 {
 	Player* player = g_game.getPlayerByName(recipient);
+	bool spawnedPlayer = false; // <-- NEW
 	if (!player) {
 		player = new Player(nullptr);
 		if (!IOLoginData::loadPlayerByName(player, recipient)) {
 			return;
 		}
+		spawnedPlayer = true; // <-- NEW
 	}
 
 	Item* item = Item::CreateItem(itemId);
@@ -20,6 +22,5 @@ void Game::addItemToPlayer(const std::string& recipient, uint16_t itemId)
 	if (player->isOffline()) {
 		IOLoginData::savePlayer(player);
 	}
-
-	delete(player); // <-- NEW
+	if (spawnedPlayer) delete(player); // <-- NEW
 }
